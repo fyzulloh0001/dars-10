@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block blockname %}
+
+{% for page in object_list %}
+
+    <ul>
+       <li>
+          <h2>
+             <a href="{% url 'detailview' page.pk %}">{{ page.title }}</a> 
+          </h2>  
+       </li>
+            <h6>
+                {{ page.text|slice:':50' }}
+            </h6>
+       
+    </ul>
+
+{% endfor %}
+
+{% endblock blockname %}

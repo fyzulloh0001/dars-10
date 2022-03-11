@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block blockname %}
+
+<h3>
+    {{ page.title }} <br> 
+</h3> 
+{{ page.text }} <br>
+{{ page.author }} <br><br><br>
+<a href="{% url 'updateview' page.pk %}">postni taxrirlash</a> <br><br>
+<a href="{% url 'deleteview' page.pk %}">postni uchirish</a>
+
+{% endblock blockname %}

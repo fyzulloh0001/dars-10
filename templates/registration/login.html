@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block blockname %}
+<form method='post'>
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'> ruyxatda utish</button>
+
+</form>
+{% endblock blockname %}

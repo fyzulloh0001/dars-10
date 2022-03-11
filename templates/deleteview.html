@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block blockname %}
+
+<form action="" method='post'>
+    {% csrf_token %}
+    {{ page.title }}
+    <input type="submit" value='Delete'> <br>
+    
+</form>
+    
+{% endblock blockname %}
+
+
+    

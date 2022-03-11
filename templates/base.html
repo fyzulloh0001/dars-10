@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suralar</title>
+    
+</head>
+<body>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <header>
+        <a href="{% url 'home' %}">PALLAB SAXIFASI HOME</a> <br> <br>
+        <a href="{% url 'createview' %}">yangi post yaratish</a> <br>
+
+        {% if user.is_authenticated %}
+            <p> xush kelbsz {{ user.username }} </p>
+            <a href="{% url 'logout' %}">saytdan chiqish</a> <br>
+        {% else %}
+            <a href="{% url 'login' %}">  saytga kirish</a> <br>
+        {% endif %}
+        
+    </header>
+    
+
+    <div class="blockname">
+        
+        {% block blockname %}
+          
+        {% endblock blockname %}
+        
+    </div>
+</body>
+</html>
