@@ -1,0 +1,19 @@
+body header a {
+    color: chartreuse;
+    text-align: center;
+}
+body header {
+    text-align: center;
+}
+
+body {
+    background-image:  url('/static/image/baliq.jpeg');
+
+}
+
+body #blockname {
+
+text-align: center;
+color:crimson;
+
+}
